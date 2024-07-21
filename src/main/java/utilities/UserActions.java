@@ -1,4 +1,4 @@
-package utils.test;
+package utilities;
 
 import org.openqa.selenium.By;
 
@@ -14,5 +14,4 @@ public class UserActions extends BaseTest {
 	public void userClick(By by) {
 		driver.findElement(by).click();
 	}
-
 }
