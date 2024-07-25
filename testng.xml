@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="nexus.test.A1_LoginTest"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<listeners>
+		<listener class-name="utilities.ListenerLibrary"></listener>
+	</listeners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="nexus.test.A1_LoginTest" />
+		<!--    	<class name="utils.test.U02_HandlingTabs" />
+			<class name="utils.test.U03_HandlingFrames" />
+			<class name="utils.test.U04_HandlingDropdown" />
+			<class name="utils.test.U05_SeleniumWaits" />
+			<class name="utils.test.U06_ExtentTest" /> -->
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
