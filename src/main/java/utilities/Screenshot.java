@@ -1,4 +1,4 @@
-package utils.test;
+package utilities;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,23 +6,13 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.testng.annotations.Test;
 
 import base.BaseTest;
 
-/*
- * File : is a class from java.io
- * TakesScreenshot is interface, RemoteWebDriver implements it. 
- * The only method this interface has is getScreenshotAs method. it is located in org.openqa.selenium.remote package.
- * FileUtils is a class from commons.io, 
- */
-
-
-public class Utility_Screenshot extends BaseTest {
-
-	@Test
+public class Screenshot extends BaseTest {
+	
 	public void takeScreenshot() throws IOException, InterruptedException {
-		                
+        
 		Thread.sleep(10000);
 		File src =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
@@ -30,4 +20,3 @@ public class Utility_Screenshot extends BaseTest {
 	}
 
 }
-  

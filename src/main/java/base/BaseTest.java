@@ -32,14 +32,14 @@ public class BaseTest {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
 	}
 	
 	@AfterMethod
 	protected void teadDown() {
 		
-		driver.close();
+		driver.quit();
 	}
 	
 	

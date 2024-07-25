@@ -19,17 +19,19 @@ public class ListenerLibrary extends BaseTest implements ITestListener{
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		extentTest.pass("Test case \"<b style='color:green;'>"+methodName+"</b> \"passed.");
+		methodName=getCamel(result.getName());
+		extentTest.pass("Test case \"<b style='color:green;'>"+methodName+"</b> \" passed.");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		extentTest.pass("\"Test case \\\"<b style='color:red;'>\"+methodName+\"</b> \\\"failed.\"");
+		methodName=getCamel(result.getName());
+		extentTest.fail("Test case \"<b style='color:red;'>"+methodName+"</b> \" failed.");
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		extentTest.skip("Test case skipped.");
+		extentTest.skip("Test case \"<b style='color:yellow;'>"+methodName+"</b> \" skipped.");
 	}
 
 	@Override
