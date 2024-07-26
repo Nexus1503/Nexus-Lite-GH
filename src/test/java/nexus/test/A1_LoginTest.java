@@ -18,7 +18,7 @@ public class A1_LoginTest extends BaseTest {
 		login.enterPassword("asdf1234");
 		//extentTest.info("Entered password id");
 		login.clickLoginButton();
-		//extentTest.info("Clicked on submit button.");
+		//extentTest.info("Clicked on submit button.");.....
 	}
 
 }
