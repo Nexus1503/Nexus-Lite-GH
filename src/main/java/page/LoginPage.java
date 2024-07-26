@@ -14,6 +14,8 @@ public class LoginPage {
 	By usernameField = By.id("text-auth-email");
 	By passwordField = By.id("text-auth-password");
 	By loginButton   = By.id("btn-auth-login");
+	By accountLink   = By.xpath("//span[contains(text(),'sandipthopate1414+test@gmail.com')]");
+	By signOutLink   = By.xpath("//a[text()='Sign out']");
 	
 	public void enterUserName(String uname) {
 		
@@ -29,4 +31,15 @@ public class LoginPage {
 		
 		driver.findElement(loginButton).click();
 	}
+	
+	public void clickAccountProfile() {
+		
+		driver.findElement(accountLink).click();
+	}
+	
+	public void clickLogoutLink() {
+		
+		driver.findElement(signOutLink).click();
+	}
+	
 }

@@ -41,14 +41,9 @@ public class BaseTest {
 		
 		driver.quit();
 	}
-	
-	
-	
-	
-	
-	
 	@AfterSuite
-	protected void closeDown() {
-		//driver.quit();
+	public void endSuite() {
+	//	extentReport.flush();
 	}
+	
 }
